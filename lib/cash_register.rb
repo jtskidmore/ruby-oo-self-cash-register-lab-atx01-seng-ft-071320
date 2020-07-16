@@ -34,7 +34,11 @@ class CashRegister
   end
 
   def items
-    @@all
+    item_names = []
+    self.all.each do |item|
+      item_names << item.title
+    end
+    item_names
   end
 
 end
