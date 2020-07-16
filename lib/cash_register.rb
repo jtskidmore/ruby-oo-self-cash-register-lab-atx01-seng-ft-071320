@@ -17,6 +17,12 @@ class CashRegister
     self.class.all << self
   end
 
+  def self.all
+    @@all
+  end
+
+  
+
   def apply_discount
     if discount != 0
       @total = @total-(@total*discount/100)
