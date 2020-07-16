@@ -16,7 +16,9 @@ class CashRegister
     @quantity = quantity.to_f
     @new_price = @price*@quantity
     @total += @new_price
-    self.class. << self
+    binding.pry
+    @items << self
+    @last_transaction << self
   end
 
 
@@ -31,15 +33,7 @@ class CashRegister
   end
 
   def items
-    item_names = []
-    self.class.all.each do |item|
-      if item.quantity
-        (item.quantity.to_i).times do
-          item_names << item.title
-        end
-      end
-    end
-    item_names
+    @items
   end
 
 end
