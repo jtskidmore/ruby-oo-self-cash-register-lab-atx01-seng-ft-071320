@@ -1,6 +1,6 @@
 require 'pry'
 
-class CashRegister 
+class CashRegister
 
   def initialize (discount*)
     @discount = discount
