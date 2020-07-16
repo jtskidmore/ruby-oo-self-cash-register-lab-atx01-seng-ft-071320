@@ -15,8 +15,8 @@ class CashRegister
     @title = title
     @price = price
     binding.pry
-    @total += (@price*@quantity.to_f)
-    @quantity = quantity
+    @total += (@price*@quantity)
+    @quantity = quantity.to_f
     self.class.all << self
   end
 
