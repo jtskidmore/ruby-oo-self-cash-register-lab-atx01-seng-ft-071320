@@ -14,8 +14,9 @@ class CashRegister
   def add_item (title, price, quantity = 1)
     @price = price
     @quantity = quantity.to_f
+    @new_price = @price*@quantity 
     binding.pry
-    @total += @price
+    @total += @new_price
     self.class.all << self
   end
 
