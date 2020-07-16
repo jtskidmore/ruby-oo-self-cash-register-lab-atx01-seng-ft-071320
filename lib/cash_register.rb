@@ -16,7 +16,7 @@ class CashRegister
     @price = price*quantity.to_f
     @total += @price
     quantity.times do
-      @items << @title
+      @item_list << @title
     end
     @last_transaction = self
   end
@@ -32,8 +32,8 @@ class CashRegister
     end
   end
 
-  def item
-
+  def items
+    @item_list
   end
 
 end
