@@ -38,7 +38,7 @@ class CashRegister
     self.class.all.each do |item|
       item_names << item.title
     end
-    item_names
+    item_names.uniq
   end
 
 end
