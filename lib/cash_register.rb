@@ -2,7 +2,7 @@ require 'pry'
 
 class CashRegister
 
-  attr_accessor :discount, :total, :title, :price, :quantity
+  attr_accessor :discount, :total, :title, :price, :quantity, :items
 
   @@all = []
 
@@ -17,7 +17,7 @@ class CashRegister
     @quantity = quantity.to_f
     @new_price = @price*@quantity
     @total += @new_price
-    self.class.all << self
+    items << self
   end
 
   def self.all
@@ -34,15 +34,7 @@ class CashRegister
   end
 
   def items
-    item_names = []
-    self.class.all.each do |item|
-      if item.quantity
-        (item.quantity.to_i).times do
-          item_names << item.title
-        end
-      end
-    end
-    item_names
+
   end
 
 end
