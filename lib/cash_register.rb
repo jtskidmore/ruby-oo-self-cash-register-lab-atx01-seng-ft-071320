@@ -37,7 +37,7 @@ class CashRegister
     item_names = []
     self.class.all.each do |item|
       if item.quantity
-        (item.quantity.to_i).times do  
+        (item.quantity.to_i).times do
           item_names << item.title
         end
       end
