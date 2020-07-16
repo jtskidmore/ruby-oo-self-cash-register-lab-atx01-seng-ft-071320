@@ -21,8 +21,6 @@ class CashRegister
     @last_transaction = self
   end
 
-
-
   def apply_discount
     if discount != 0
       @total = @total-(@total*discount/100)
@@ -34,6 +32,10 @@ class CashRegister
 
   def items
     @item_list
+  end
+
+  def void_last_transaction
+    @total = @total - @last_transaction.price
   end
 
 end
