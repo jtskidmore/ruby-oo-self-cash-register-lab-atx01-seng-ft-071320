@@ -33,7 +33,7 @@ class CashRegister
   end
 
   def item
-    
+
   end
 
 end
